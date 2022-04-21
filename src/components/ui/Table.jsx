@@ -1,12 +1,6 @@
 import userImg from "../../assets/img_avatar.png";
 
 function Table(props) {
-  // console.log(props.data);
-
-  // props.data.map((row) => console.log(row["id"]));
-
-  // props.data.map((row) => console.log(row["name"]));
-
   return (
     <table className="table table-hover table-striped">
       <thead>

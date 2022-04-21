@@ -1,0 +1,195 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: fit-content;
+  box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  border-left: 10px solid #173826;
+  padding: 20px;
+  padding-bottom: 30px;
+  // overflow: hidden;
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    width: 15%;
+    min-width: 250px;
+    border-right: 2px solid rgba(128, 128, 128, 0.726);
+    padding-right: 20px;
+
+    .top {
+      h1 {
+        color: #173826;
+        font-weight: bold;
+        font-size: 30px;
+      }
+
+      span {
+        font-size: 15px;
+        font-weight: normal;
+      }
+
+      .status {
+        font-weight: bold;
+
+        &.Done {
+          color: var(--warning)
+        }
+
+        &.Active {
+          color: var(--green)
+        }
+      }
+
+    }
+
+    .bottom {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+    .header {
+      border-bottom: 2px solid var(--border-gray);
+      margin-left: 10px;
+      padding-left: 10px;
+      padding-bottom: 10px;
+      position: relative;
+      h1 {
+        font-size: 1.8rem;
+        font-weight: bold;
+      }
+
+      .groupName {
+        color: rgb(92, 92, 92);
+        font-size: 0.9rem;
+        font-weight: 400;
+      }
+
+      .meatballMenu {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+
+    .moreInfo {
+      display: flex;
+      height: 100%;
+
+      h5 {
+        text-align: center;
+        font-size: 1rem;
+        color: rgb(92, 92, 92);
+      }
+      
+      .section {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        flex: 1;
+        padding: 10px 15px;
+        align-items: center;
+
+      }
+
+      .divider {
+        margin: auto;
+        border-right: 2px solid var(--border-light-gray);
+        height: 50%;
+      }
+
+      .panels {
+        text-align: center;
+        gap: 15px;
+
+        .panel {
+          .name {
+            font-size: 1.2rem;
+            font-weight: bold;
+          }
+
+          .role {
+            font-size: 0.8rem;
+            color: rgba(128, 128, 128, 0.726);
+          }
+          
+
+        }
+      }
+
+      .gradesheets {
+        gap: 20px;
+
+        .child {
+          width: 100%;
+
+          h6 {
+            font-size: 1rem;
+            font-weight: 500;
+            text-align: center;
+          }
+
+          .buttons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+
+            a {
+              flex: 1;
+              margin-top: 12px;
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
+
+      .titleProposals {
+        gap: 10px;
+
+        .proposal {
+          a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: black;
+            
+          
+            &:hover {
+              background-color: gainsboro;
+
+            }
+            
+            .remark {
+              &.true {
+                color: var(--green);
+              }
+
+              &.false {
+                color: var(--red);
+              }
+            }
+
+          }
+
+        }
+
+
+      }
+
+    }
+
+
+  }
+}

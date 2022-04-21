@@ -40,12 +40,16 @@ export default class Api {
     return this.init().get("/v1/groups", { params: params });
   };
 
-  getGradesheets = (params) => {
+  getTemplates = (params) => {
     return this.init().get("/v1/templates", { params: params });
   };
 
-  getSchedules = (params) => {
-    return this.init().get("/v1/templates", { params: params });
+  getScedules = (params) => {
+    return this.init().get("/v1/schedules", { params: params });
+  };
+
+  getRubrics = (params) => {
+    return this.init().get("/v1/rubrics", { params: params });
   };
 
   addNewUser = (data) => {

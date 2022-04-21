@@ -1,34 +1,40 @@
 import { Routes, Route } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
-import Layout from "components/layout/Layout";
-import DashboardPage from "pages/Dashboard/Dashboard";
-import GroupsPage from "pages/Groups/Groups";
-import PanelistsPage from "pages/Panelists/Panelists";
-import StudentsPage from "pages/Students/Students";
-import SchedulesPage from "pages/Schedules/Schedules";
-import GradesheetsPage from "pages/Gradesheets/Gradesheets";
-// import RubricsPage from "./pages/Rubrics/Rubrics";
-import RubricsPage from "pages/Rubrics/Rubrics";
 import List from "pages/list/List";
+import CardsPage from "pages/cards/CardsPage";
+import Home from "pages/home/Home";
 
 function App() {
   return (
-    <Layout>
+    <div className="app">
       <Helmet>
         <title>App Title</title>
       </Helmet>
       <Routes>
-        <Route path="/" element={<List />} />
-        <Route path="/groups/" element={<GroupsPage />} />
-        <Route path="/panelists/" element={<PanelistsPage />} />
-        <Route path="/students/" element={<StudentsPage />} />
-        <Route path="/schedules/" element={<SchedulesPage />} />
-        <Route path="/gradesheets/" element={<GradesheetsPage />} />
-        <Route path="/rubrics/" element={<RubricsPage />} />
-        <Route path="/logout/" />
+        <Route path="/">
+          <Route index element={<Home title="Dashboard" />} />
+          <Route path="groups">
+            <Route index element={<List title="Groups" />} />
+          </Route>
+          <Route path="panelists">
+            <Route index element={<List title="Panelists" />} />
+          </Route>
+          <Route path="students">
+            <Route index element={<List title="Students" />} />
+          </Route>
+          <Route path="schedules">
+            <Route index element={<CardsPage title="Schedules" />} />
+          </Route>
+          <Route path="gradesheets">
+            <Route index element={<List title="Gradesheets" />} />
+          </Route>
+          <Route path="rubrics">
+            <Route index element={<CardsPage title="Rubrics" />} />
+          </Route>
+        </Route>
       </Routes>
-    </Layout>
+    </div>
   );
 }
 
